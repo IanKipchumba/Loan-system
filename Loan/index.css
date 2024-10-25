@@ -1,0 +1,60 @@
+*{
+box-sizing:border-box; 
+margin:0;
+padding:0; }
+
+body{
+
+background: #c6c600; }
+
+.title {
+
+margin:1rem; }
+
+.title h1{
+
+color:white;
+
+font-size:3rem;}
+
+.container {
+background:whitesmoke;
+
+width:90%;
+
+margin:auto;
+
+border-radius:5px;
+
+padding:1em;
+
+filter: drop-shadow(0.0.0.35em #434242);}
+
+.amount {
+
+margin:5px 0 5px 0;}
+
+.time_interest {
+
+display:flex;
+
+flex-direction:inline; justify-content:space-between; margin-bottom:0.7rem;}
+
+.Loantime,
+.totalinterest {padding:10px;
+}
+
+repayment due {
+
+display:flex;
+
+flex-direction:inline;
+
+margin:20px 0 0 0;
+
+align-content:center;
+
+align-items: center;
+
+margin:1.5em 0 1em 0;
+}

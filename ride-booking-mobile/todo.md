@@ -12,4 +12,4 @@
 - [x] Add or update deterministic tests for booking state transitions
 - [x] Run typecheck, lint, and test verification
 - [x] Capture final mobile preview and save checkpoint
-- [ ] Export the completed app into IanKipchumba/Loan-system/ride-booking-mobile and push the commit
+- [x] Export the completed app into IanKipchumba/Loan-system/ride-booking-mobile and push the commit

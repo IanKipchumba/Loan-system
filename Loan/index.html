@@ -1,89 +1,114 @@
-<!DOCTYPE html>
-
+<!doctype html>
+<!-- Lendwell design: warm editorial lending experience with confident navy structure, sunlit lime signals, and an interactive asymmetric calculator. -->
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore a simple illustrative loan repayment estimate." />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Lendwell — Make room for what matters</title>
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Lendwell home">
+        <span class="wordmark-mark"><i></i><i></i></span>
+        <span>lendwell</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#calculator">Calculator</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#support">Support</a>
+      </nav>
+      <a class="header-cta" href="#calculator">Check your plan <span>↗</span></a>
+    </header>
 
-<head>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> made for the next move</p>
+          <h1>Money plans that<br />feel <em>more possible.</em></h1>
+          <p class="hero-text">Choose a loan amount, shape your repayment timeline, and see a clear monthly estimate before you start an application.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#calculator">Build my estimate <span>↓</span></a>
+            <a class="text-link" href="#how-it-works">How lending works <span>↘</span></a>
+          </div>
+          <div class="trust-line">
+            <div class="trust-spark">✦</div>
+            <p><b>Clear terms, from the beginning.</b><br />Your estimate is illustrative—your final rate depends on affordability and credit assessment.</p>
+          </div>
+        </div>
 
-<meta charset="UTF-8">
+        <div class="hero-scene" aria-label="An abstract representation of flexible lending">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="balance-card balance-card-top"><span>On your terms</span><b>12–84</b><small>months to repay</small></div>
+          <div class="balance-card balance-card-bottom"><span>Available to explore</span><b>R30k—R1m</b><small>loan amount range</small></div>
+          <div class="sun-disc"><span>small steps<br />add up</span></div>
+          <div class="hero-caption">Rethink the route<br />to your next yes.</div>
+        </div>
+      </section>
 
-<meta name="viewport" content="width=device-width, initial-sc
+      <section class="calculator-section" id="calculator">
+        <div class="calculator-intro">
+          <p class="eyebrow eyebrow-light"><span></span> repayment planner</p>
+          <h2>Shape a loan<br />around <em>your life.</em></h2>
+          <p>Adjust the two controls, then use the estimate as a starting point for your planning.</p>
+          <div class="rate-note"><span>i</span><p>Illustrative rate used for this estimate: <b>12.9% p.a.</b></p></div>
+        </div>
 
-ale=1.0">
+        <form class="calculator-card" id="loan-form">
+          <div class="card-topline">
+            <span>YOUR QUICK ESTIMATE</span>
+            <span class="live-pill"><i></i> updates live</span>
+          </div>
+          <div class="control-group">
+            <div class="control-label"><label for="amount-range">How much would help?</label><output id="amount-output" for="amount-range">R200 000</output></div>
+            <input id="amount-range" type="range" min="30000" max="1000000" step="10000" value="200000" />
+            <div class="range-limits"><span>R30 000</span><span>R1 000 000</span></div>
+          </div>
+          <div class="control-group term-control">
+            <div class="control-label"><label for="term-range">How long would you like?</label><output id="term-output" for="term-range">5 years</output></div>
+            <input id="term-range" type="range" min="12" max="84" step="12" value="60" />
+            <div class="range-limits"><span>12 months</span><span>7 years</span></div>
+          </div>
+          <div class="estimate-panel" aria-live="polite">
+            <div class="estimate-heading"><span>Estimated monthly repayment</span><span class="estimate-dot"></span></div>
+            <strong id="monthly-output">R4 536</strong>
+            <p>per month over <b id="months-output">60 months</b></p>
+            <div class="estimate-rule"></div>
+            <div class="estimate-breakdown">
+              <div><span>Total repayable</span><b id="total-output">R272 160</b></div>
+              <div><span>Total interest</span><b id="interest-output">R72 160</b></div>
+            </div>
+          </div>
+          <a class="button button-lime calculator-button" href="#how-it-works">See next steps <span>→</span></a>
+          <p class="disclaimer">Estimates exclude potential once-off and monthly service fees. Final repayments, rate and terms are confirmed after assessment.</p>
+        </form>
+      </section>
 
-<link rel="stylesheet" href="css/index.css">
+      <section class="benefits" id="how-it-works">
+        <div class="benefits-heading"><p class="eyebrow"><span></span> a clearer way forward</p><h2>Good money decisions<br />start with <em>good context.</em></h2></div>
+        <div class="benefit-list">
+          <article class="benefit-item"><span class="benefit-number">01</span><div><h3>Start with a clear view</h3><p>Know your monthly estimate before you apply, with a repayment period you can adjust.</p></div><span class="benefit-icon">↗</span></article>
+          <article class="benefit-item"><span class="benefit-number">02</span><div><h3>Choose your pace</h3><p>Find the balance between a lighter monthly payment and a shorter, more focused repayment route.</p></div><span class="benefit-icon">↗</span></article>
+          <article class="benefit-item"><span class="benefit-number">03</span><div><h3>Apply with confidence</h3><p>When you are ready, complete an affordability assessment to receive your personalised offer.</p></div><span class="benefit-icon">↗</span></article>
+        </div>
+      </section>
 
-<script src="js/index.js"></script>
+      <section class="closing-banner" id="support">
+        <div class="closing-mark">LW</div>
+        <p class="eyebrow eyebrow-light"><span></span> ready when you are</p>
+        <h2>Make space for<br />what comes <em>next.</em></h2>
+        <a class="button button-lime" href="#calculator">Revisit my estimate <span>↑</span></a>
+      </section>
+    </main>
 
-<title>Loan</title>
-
-</head>
-
-<body>
-
-<div class="title">
-
-<h1>Online loan</h1>
-
-</div>
-
-<div class="container">
-
-<div class="heading">
-
-<p style="font-weight:bold;
-
-font-size:20px; margin:1em 0.0.8em 0;">Loan amount</p>
-
-</div>
-
-<div class="amount">
-
-<h1 style="color:#93b205;
-
-font-size:3rem;">R 200 000.00</h1>
-
-</div>
-
-<div class="loan amount">
-
-<p style="font-size:13px;
-
-color:grey,"></p>Loan Amount: R 30 000 = R1 000 000</p>
-
-</div>
-
-<div class="time_interest">
-
-<div class="loantime">
-
-<p style="color:grey;">Loan time:</p>
-
-<h2>5 years</h2>
-
-</div>
-
-<div class="totalinterest">
-
-<p style="color:grey;"> Total interest:</p>
-
-<h2>50 000</h2>
-
-</div>
-
-</div>
-
-<div class="repayment_due">
-
-<p style="font-weight:600;
-
-font-size: 18px;"> Total repayment due: </p>
-
-<h1 style="margin-left:5px"> R 250 000</h1>
-
-</div>
-
-</div>
-
-</body>
-
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#top"><span class="wordmark-mark"><i></i><i></i></span><span>lendwell</span></a>
+      <p>For planning purposes only. Lending is subject to affordability and credit criteria.</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
 </html>
